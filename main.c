@@ -1,3 +1,12 @@
+/*
+    NAME        : Divya S
+    DATE        : 24-11-25
+    TITLE       : TIC TAC TOE
+    DESCRIPTION : A console based 2 player gaming application 
+        -> This project is a simple Tic Tac Toe game implemented using a 3×3 grid.
+        -> It is a two-player console-based game where players take turns marking spaces on the grid with X and O.
+        -> The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game
+
 /*INCLUDING ALL INBUILT STANDARD LIBRARY FILES*/
 #include<stdio.h>
 #include<stdlib.h>
