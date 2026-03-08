@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include"tictactoe.h"
 
-
+/*PURPOSE: To initialise the array with 3x3 matrix or grid*/
 void intialize(char board[3][3]){
     char count='1';
     printf(RED"+-------+-------+-------+\n"RESET);
@@ -19,6 +19,7 @@ void intialize(char board[3][3]){
     }
 }
 
+/*PURPOSE: To print the pos and the changes done in the board*/
 void printboard(char Board[3][3])
 {
    printf(BLUE"+-------+-------+-------+\n"RESET);
@@ -35,8 +36,10 @@ void printboard(char Board[3][3])
     }
 }
 
+
+/*PURPOSE: To analyse the pos moved by the user whether it is already Filled or not */
 int count=1;
-int makemove(char board[3][3],char pos/*int row,int column*/,int ch,int ch1)
+int makemove(char board[3][3],char pos,int ch,int ch1)
 {
     int pos_char=(pos-'0');
     int row=(pos_char-1)/3;
@@ -60,15 +63,15 @@ int makemove(char board[3][3],char pos/*int row,int column*/,int ch,int ch1)
             return 0;
         }
     }
-    else{
+    else{ 
         printf("Entered Position is out of range\n");
         return 0;
     }
 }
 
+/*PURPOSE: To check which player won or match draw after every move */
 int flag=0;
-void checkwin(char board[3][3],char pos/*int row,int column*/,char str1[50],char str2[50],char ch,char ch1){
-    // Check rows and columns using nested loops
+void checkwin(char board[3][3],char pos,char str1[50],char str2[50],char ch,char ch1){
     
     if(flag==0)
     {
